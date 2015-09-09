@@ -6,9 +6,9 @@ app.config(function ($routeProvider) {
       templateUrl: "partials/moviesQuery.html",
       controller: "SearchController",
       controller: "MoviesController"
-    }).when('/:id', {
+    })
+    .when('/:id', {
       templateUrl: 'partials/titleQuery.html',
-      // controller: "SearchController",
-      controller: "SingleTitleContoller"
+      controller: "TitleController"
     });
 });

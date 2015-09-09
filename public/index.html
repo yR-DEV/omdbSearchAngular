@@ -20,10 +20,30 @@
       </div>
       <br>
       <br>
-      <ng-view></ng-view>
 
-      <!-- <div ng-show -->
+      <!-- <div ng-show="results">
+        <div class="movie-query-div" ng-repeat="result in results">
+          <a ng-href="/#/{{result.imdbID}}">
+            <p ng-click="titleInfoQuery()">
+              {{result.Title}}
+            </p>
+            <p>
+                Year:  {{result.Year}}
+            </p>
+          </a>
+        </div>
+      </div> -->
+
+      <div ng-show="singleTitleBool">
+        <p>
+          Hay
+        </p>
+      </div>
+
     </div>
+
+    <ng-view></ng-view>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="javascripts/angular-resource.js"></script>
