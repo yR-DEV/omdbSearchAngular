@@ -31,3 +31,9 @@ a {
 .search-button {
   margin-bottom: 15px;
 }
+
+.single-movie-query {
+  margin: auto;
+  width: 40%;
+  border: 1px solid grey;
+}

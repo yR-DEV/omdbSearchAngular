@@ -3,12 +3,16 @@ var app = angular.module("MovieSearch", ['ngRoute']);
 app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: "partials/moviesQuery.html",
-      controller: "SearchController",
-      controller: "MoviesController"
-    })
-    .when('/:id', {
+      templateUrl: "partials/noQuery.html",
+      // controller: "MoviesController",
+      controller: "SearchController"
+    }).when('/movieSearch', {
+      templateURL: "partials/moviesQuery.html",
+      controller: "MoviesController",
+      controller: "SearchController"
+    }).when('/:id', {
       templateUrl: 'partials/titleQuery.html',
-      controller: "TitleController"
-    });
+      controller: "SearchController",
+      // controller: "TitleController"
+    }).otherwise({redirectTo: '/'})
 });
