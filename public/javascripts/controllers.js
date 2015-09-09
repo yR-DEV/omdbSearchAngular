@@ -6,9 +6,10 @@ app.controller("SearchController", function($scope, $http) {
     // console.log('in search');
     $http.get('http://www.omdbapi.com/?s=' + title)
       .then(function(data) {
-        $scope.searchResult = data.data.search;
+        console.log(data);
+        return $scope.searchResult = data.data.search;
       }, function(data) {
-        console.log('not data');
+        return console.log('not data');
       });
     $scope.showResultsBool = true;
   };
