@@ -15,10 +15,9 @@ app.controller("SearchController", ['$scope', '$http', function($scope, $http) {
     $http.get('http://www.omdbapi.com/?i=' + result.imdbID)
     .then(function(data) {
       $scope.results = '';
+      console.log(data.data);
       $scope.titleQuery = data.data;
     });
-
-
   };
 
 }]);

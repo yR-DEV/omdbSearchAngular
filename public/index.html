@@ -37,8 +37,30 @@
       </div>
 
       <div class="single-movie-query" ng-show="titleQuery">
-        <p>
-          {{titleQuery.Plot}}
+        <div class="plot-and-image">
+          <p class="movie-plot">
+            {{titleQuery.Plot}}
+          </p>
+          <img class="movie-image" ng-src="{{titleQuery.Poster}}">
+        </div>  
+        <h4>Additional Details:</h4>
+        <p class="movie-key-title">
+          Awards:
+          <p>
+          {{titleQuery.Awards}}
+          </p>
+        </p>
+        <p class="movie-key-title">
+          Country:
+          <p>
+          {{titleQuery.Country}}
+          </p>
+        </p>
+        <p class="movie-key-title">
+          Director:
+          <p>
+          {{titleQuery.Director}}
+          </p>
         </p>
       </div>
 
