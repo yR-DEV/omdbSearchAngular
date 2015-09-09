@@ -4,9 +4,11 @@ app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: "partials/moviesQuery.html",
-      controller: "SearchController"
+      controller: "SearchController",
+      controller: "MoviesController"
     }).when('/:id', {
       templateUrl: 'partials/titleQuery.html',
-      controller: "SearchController"
+      // controller: "SearchController",
+      controller: "SingleTitleContoller"
     });
 });

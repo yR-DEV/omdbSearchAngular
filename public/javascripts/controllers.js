@@ -20,22 +20,26 @@
 //   // console.log($scope.results);
 //
 // });
-var resutls = [];
+var results = [];
 
 app.controller("SearchController", ['$scope', '$http', function($scope, $http) {
   $scope.searchMovieTitle = function(title) {
+    $scope.titleInfoBool = false;
     $http.get('http://www.omdbapi.com/?s=' + title)
     .then(function(data) {
       console.log(data);
-      $scope.results = data.data.Search;
+      results = data.data.Search;
+      $scope.results = results;
     });
   };
 
   $scope.queryMovieInfo = function(movieTitleID) {
-    $http.get('http://www.imdbapi.com/?i=' + movieTitleID)
-    .then(function(data) {
-      console.log(data.data);
-    })
+    $scope.titleInfoBool = true;
+    console.log('in query of 1 movie');
+    // $http.get('http://www.imdbapi.com/?i=' + movieTitleID)
+    // .then(function(data) {
+    //   console.log(data.data);
+    // })
     // console.log(movieTitle);
   }
 
@@ -46,5 +50,14 @@ app.controller("SearchController", ['$scope', '$http', function($scope, $http) {
   //   }
   // }])
 
+
+}]);
+
+
+app.controller("MoviesController", ['$scope', '$http', function($scope, $http) {
+
+}]);
+
+app.controller("SingleTitleContoller", ['$scope', '$http', function($scope, $http) {
 
 }]);
