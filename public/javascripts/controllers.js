@@ -16,7 +16,7 @@ app.controller("SearchController", function($scope, $http) {
 
 });
 
-
+//need to figure out a way to get the data quereyed from the API from that 
 app.controller("TitleQueryController", function($scope, $http) {
   // console.log($scope.bool);
 })
