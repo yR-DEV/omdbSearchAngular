@@ -1,0 +1,23 @@
+<!-- <div ng-controller="TitleQueryController" -->
+  <div ng-show="results">
+    <div class="movie-query-div"
+
+      <div ng-repeat="result in results" ng-click="queryMovieInfo(result.imdbID)">
+          <p>
+            <!-- <a ng-href="http://www.imdbapi.com/?i={{result.imdbID}}"> -->
+              <span>
+                {{result.Title}}
+              </span>
+              <p>
+                {{result.imdbID}}
+              </p>
+              <br>
+              <span>
+                Year: {{result.Year}}
+              </span>
+            <!-- </a> -->
+          </p>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->

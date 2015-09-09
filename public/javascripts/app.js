@@ -1,9 +1,9 @@
-var app = angular.module("MovieSearch", ['ngRoute', 'ngService']);
+var app = angular.module("MovieSearch", ['ngRoute']);
 
 app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: "partials/titleQuery.html",
-      controller: "TitleQueryController"
+      templateUrl: "partials/moviesQuery.html",
+      controller: "SearchController"
     });
 });
