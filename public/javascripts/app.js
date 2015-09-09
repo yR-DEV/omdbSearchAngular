@@ -1,4 +1,4 @@
-var app = angular.module("MovieSearch", ['ngRoute']);
+var app = angular.module("MovieSearch", ['ngRoute', 'ngService']);
 
 app.config(function ($routeProvider) {
   $routeProvider
