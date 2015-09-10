@@ -1,7 +1,7 @@
 var tempArr = [];
 
-app.controller("SearchController", ['$scope', '$http', 'MovieQuery',
-function($scope, $http, MovieQuery) {
+app.controller("SearchController", ['$scope', '$http', 'QueryResults',
+function($scope, $http, QueryResults) {
   $scope.searchMovieTitle = function(title) {
     $http.get('http://www.omdbapi.com/?s=' + title)
     .then(function(data) {
@@ -9,6 +9,7 @@ function($scope, $http, MovieQuery) {
       $scope.results = data.data.Search;
       tempArr = data.data.Search;
       console.log($scope.results);
+      $scope.testResults = QueryResults.passAlong(data.data.Search);
     });
   };
 

@@ -9,6 +9,11 @@
 //   }
 // }])
 
-app.factory('MovieQuery', ['$scope', '$http', function($scope, $http) {
-  console.log('in factory');
+app.factory('QueryResults', ['$scope', '$http',
+function($scope, $http) {
+  return {
+    passAlong: function(data) {
+      return data;
+    },
+  };
 }]);
