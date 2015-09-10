@@ -8,3 +8,7 @@
 //     console.log(title);
 //   }
 // }])
+
+app.factory('MovieQuery', ['$scope', '$http', function($scope, $http) {
+  console.log('in factory');
+}]);

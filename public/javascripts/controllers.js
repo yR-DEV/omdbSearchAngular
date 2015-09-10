@@ -1,6 +1,7 @@
 var tempArr = [];
 
-app.controller("SearchController", ['$scope', '$http', function($scope, $http) {
+app.controller("SearchController", ['$scope', '$http', 'MovieQuery',
+function($scope, $http, MovieQuery) {
   $scope.searchMovieTitle = function(title) {
     $http.get('http://www.omdbapi.com/?s=' + title)
     .then(function(data) {
